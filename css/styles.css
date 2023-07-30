@@ -1,0 +1,70 @@
+@import './normalize.css';
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: sans-serif;
+}
+
+.site {
+	max-width: 1140px;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 100vh;
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+	justify-items: center;
+	align-items: center;
+	padding: 30px;
+}
+
+.site_row--first {
+	order: -1;
+	margin-bottom: 4rem;
+}
+
+.site_image {
+	max-width: 100%;
+	border-radius: 60%;
+}
+.site_heading {
+	font-size: 40px;
+	margin-top: 0;
+	text-align: center;
+}
+
+.site_subheading {
+	font-size: 20px;
+	text-align: center;
+}
+
+.site_icons {
+	display: flex;
+	justify-content: space-around;
+}
+
+.site_icon {
+	font-size: 26px;
+	border: 1.5px solid #000000;
+	border-radius: 30%;
+	padding: 5px;
+	background: #add8e6;
+}
+
+@media screen and (min-width: 768px) {
+	.site {
+		grid-template-columns: 1fr 1fr;
+	}
+	.site_row--first {
+		order: 1;
+	}
+}
